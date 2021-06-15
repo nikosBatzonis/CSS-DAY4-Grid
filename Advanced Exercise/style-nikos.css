@@ -1,0 +1,72 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    /* overflow: hidden; */
+}
+
+img {
+    width: 95%;
+    height: 250px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    column-gap: 2em;
+    margin-left: 20px;
+}
+
+
+/* Responsive Laptop */
+
+@media (max-width: 1024px) {
+    .container {
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        grid-template-rows: 50% 50%;
+        column-gap: 2em;
+        row-gap: 2em;
+    }
+    h1 {
+        color: rgb(43, 255, 0);
+        text-align: center;
+    }
+    .four {
+        grid-column: 2;
+    }
+}
+
+
+/* Responsive Tablet */
+
+@media (max-width: 768px) {
+    .container {
+        display: grid;
+        grid-template-rows: 50% 50%;
+        grid-template-columns: 50% 50%;
+        row-gap: 2em;
+    }
+    h1 {
+        color: rgb(76, 0, 255);
+        text-align: center;
+    }
+}
+
+
+/* Responsive Mobile Phones */
+
+@media (max-width: 425px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    h1 {
+        color: red;
+        text-align: center;
+    }
+}
